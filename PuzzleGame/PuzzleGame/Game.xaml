@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PuzzleGame.Game">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="200" />
+                    <RowDefinition Height="230" />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Label Text="Puzzle Game" FontSize="Large" HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="0" Grid.Row="0" />
+                
+                <!-- puzzles -->
+                <Grid Grid.Column="0" Grid.Row="1" HorizontalOptions="Center" VerticalOptions="Start" Margin="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="75" />
+                        <RowDefinition Height="75" />
+                        <RowDefinition Height="75" />
+                    </Grid.RowDefinitions>
+                    <Button x:Name="puz1" Clicked="Puz1_Clicked" WidthRequest="75" Grid.Column="0" Grid.Row="0" />
+                    <Button x:Name="puz2" Clicked="Puz2_Clicked" WidthRequest="75" Grid.Column="1" Grid.Row="0" />
+                    <Button x:Name="puz3" Clicked="Puz3_Clicked" WidthRequest="75" Grid.Column="2" Grid.Row="0" />
+                    <Button x:Name="puz4" Clicked="Puz4_Clicked" WidthRequest="75" Grid.Column="0" Grid.Row="1" />
+                    <Button x:Name="puz5" Clicked="Puz5_Clicked" WidthRequest="75" Grid.Column="1" Grid.Row="1" />
+                    <Button x:Name="puz6" Clicked="Puz6_Clicked" WidthRequest="75" Grid.Column="2" Grid.Row="1" />
+                    <Button x:Name="puz7" Clicked="Puz7_Clicked" WidthRequest="75" Grid.Column="0" Grid.Row="2" />
+                    <Button x:Name="puz8" Clicked="Puz8_Clicked" WidthRequest="75" Grid.Column="1" Grid.Row="2" />
+                    <Button x:Name="puz9" Clicked="Puz9_Clicked" WidthRequest="75" Grid.Column="2" Grid.Row="2" />
+                </Grid>
+
+                <Button Text="Back to menu" FontSize="Medium" x:Name="backToMenuBtn" Clicked="BackToMenuBtn_Clicked" WidthRequest="200" Grid.Column="0" Grid.Row="3" HorizontalOptions="Center" VerticalOptions="Start" />
+                <Label Text="Gratulations!" FontSize="Large" x:Name="grats" Grid.Column="0" Grid.Row="4" HorizontalOptions="Center" VerticalOptions="Start" IsVisible="False" />
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

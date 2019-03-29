@@ -13,5 +13,11 @@ namespace PuzzleGame
         {
             InitializeComponent();
         }
+
+        async void PlayBtn_Clicked(object sender, EventArgs e)
+        {
+            var game = new Game();
+            await Navigation.PushAsync(game);
+        }
     }
 }

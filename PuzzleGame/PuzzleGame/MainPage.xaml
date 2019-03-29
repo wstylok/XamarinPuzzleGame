@@ -5,10 +5,17 @@
              x:Class="PuzzleGame.MainPage">
 
     <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="200" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Label Text="Puzzle Game" FontSize="Large" HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="0" Grid.Row="0" />
+            <Button Text="Play" x:Name="PlayBtn" FontSize="Medium" Clicked="PlayBtn_Clicked" WidthRequest="200" HorizontalOptions="Center" VerticalOptions="Start" Grid.Column="0" Grid.Row="1" />
+        </Grid>
     </StackLayout>
 
 </ContentPage>
